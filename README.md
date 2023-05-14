@@ -1,7 +1,6 @@
 # Praxisaufgabe - Eingabeformular
 
-Willkommen zur wöchentlichen Praxisaufgabe.  
-Heute wirst du ein Eingabeformular erstellen.
+Willkommen zur wöchentlichen Praxisaufgabe, heute wirst du ein Eingabeformular erstellen.
 
 ---
 
@@ -10,7 +9,7 @@ Es ist nicht notwendig, dass sie exakt gleich aussieht.
 
 Zusätzlich hat deine Benutzeroberfläche folgende Funktionalitäten:
 1. Der Nutzer kann einen Vornamen und einen Nachnamen in die Textfelder "Vorname" 
-und "Nachname" eingeben.  
+und "Nachname" eingeben. 
 Wenn der Nutzer auf eins der zwei Felder klickt, verschwindet der vorausgefüllte Text "Vorname", bzw. "Nachname".
 2. Wenn der Nutzer ein Geschlecht auswählt, wird die Auswahl dem Nutzer angezeigt.
 Es kann immer nur ein Geschlecht ausgewählt sein.
