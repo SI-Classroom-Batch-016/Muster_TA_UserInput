@@ -34,7 +34,7 @@
             android:layout_marginStart="32dp"
             android:textSize="24sp"
             android:textColor="@color/black"
-            android:text="Eingabeformular"/>
+            android:text="@string/eingabeformular"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -45,7 +45,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Vorname"
+        android:hint="@string/vorname_default"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -57,7 +57,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nachname"
+        android:hint="@string/nachname_default"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etVorname" />
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Geschlecht"
+        android:text="@string/geschlecht_default"
         app:layout_constraintTop_toBottomOf="@id/etNachname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -77,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="Frau"
+        android:text="@string/frau"
         app:layout_constraintTop_toBottomOf="@id/tvGeschlecht"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bMann" />
@@ -86,7 +86,7 @@
         android:id="@+id/bMann"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mann"
+        android:text="@string/mann"
         app:layout_constraintTop_toBottomOf="@id/tvGeschlecht"
         app:layout_constraintStart_toEndOf="@+id/bFrau"
         app:layout_constraintEnd_toStartOf="@+id/bDivers" />
@@ -96,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
-        android:text="Divers"
+        android:text="@string/divers"
         app:layout_constraintTop_toBottomOf="@id/tvGeschlecht"
         app:layout_constraintStart_toEndOf="@+id/bMann"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -107,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Alter"
+        android:text="@string/alter_default"
         app:layout_constraintTop_toBottomOf="@id/bMann"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -124,7 +124,7 @@
         android:id="@+id/tvGewicht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gewicht"
+        android:text="@string/gewicht_default"
         app:layout_constraintTop_toBottomOf="@id/sbAlter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -142,7 +142,7 @@
         android:id="@+id/bEinreichen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Einreichen"
+        android:text="@string/einreichen"
         app:layout_constraintTop_toBottomOf="@id/sbGewicht"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bReset" />
@@ -151,7 +151,7 @@
         android:id="@+id/bReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
+        android:text="@string/reset"
         app:layout_constraintTop_toBottomOf="@id/sbGewicht"
         app:layout_constraintStart_toEndOf="@+id/bEinreichen"
         app:layout_constraintEnd_toEndOf="parent" />
