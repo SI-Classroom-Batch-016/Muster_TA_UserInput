@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioGroup
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -16,27 +17,12 @@ class MainActivity : AppCompatActivity() {
 
     // gender views
     lateinit var genderText: TextView
-    lateinit var genderFemale: Button
-    lateinit var genderMale: Button
-    lateinit var genderDiverse: Button
-
-    // age views
-    lateinit var ageText: TextView
-    lateinit var age: SeekBar
-
-    // size views
-    lateinit var sizeText: TextView
-    lateinit var size: SeekBar
+    lateinit var gender: RadioGroup
 
     // submit and reset views
     lateinit var submit: Button
     lateinit var submitText: TextView
     lateinit var reset: Button
-
-    // vars
-    var selectedGender: String? = null
-    var selectedAge = 0.0
-    var selectedSize = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,55 +35,33 @@ class MainActivity : AppCompatActivity() {
 
         // gender views
         genderText = findViewById(R.id.tvGeschlecht)
-        genderFemale = findViewById(R.id.bFrau)
-        genderMale = findViewById(R.id.bMann)
-        genderDiverse = findViewById(R.id.bDivers)
-
-        // age views
-        ageText = findViewById(R.id.tvAlter)
-        age = findViewById(R.id.sbAlter)
-
-        // size views
-        sizeText = findViewById(R.id.tvGewicht)
-        size = findViewById(R.id.sbGewicht)
+        gender = findViewById(R.id.radio_group)
 
         // submit and reset views
         submit = findViewById(R.id.bEinreichen)
         submitText = findViewById(R.id.tvAntwort)
         reset = findViewById(R.id.bReset)
 
-        // Set listener
 
-        // Button "Frau"
-        genderFemale.setOnClickListener {
-            selectedGender = "Frau"
-            genderText.text = getString(R.string.geschlecht, "Frau")
-        }
-
-        // Button "Mann"
-        genderMale.setOnClickListener {
-            selectedGender = "Mann"
-            genderText.text = getString(R.string.geschlecht, "Mann")
-        }
-
-        // Button "Divers"
-        genderDiverse.setOnClickListener {
-            selectedGender = "Divers"
-            genderText.text = getString(R.string.geschlecht, "Divers")
-        }
 
         // Button "Einreichen"
         submit.setOnClickListener {
-            submitText.text = getString(R.string.antwort, firstName.text, lastName.text, selectedGender, selectedAge, selectedSize)
+
+            var selectedGender: String? = null
+            when (gender.checkedRadioButtonId) {
+                R.id.radio_button_frau -> selectedGender = "Frau"
+                R.id.radio_button_mann -> selectedGender = "Mann"
+                R.id.radio_button_divers -> selectedGender = "Divers"
+            }
+
+            // Check here, if user has made all required inputs
+            val isGenderSelected = selectedGender != null
+            if (isGenderSelected) {
+                submitText.text = getString(R.string.antwort, firstName.text, lastName.text, selectedGender)
+            } else {
+                submitText.text = "Fail"
+            }
         }
-
-        // Seekbar "Alter"
-
-
-        // Seekbar "Gewicht"
-
-        // Button "Reset"
-
 
     }
 }

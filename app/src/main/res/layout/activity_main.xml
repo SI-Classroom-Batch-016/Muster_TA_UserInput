@@ -66,84 +66,88 @@
         android:id="@+id/tvGeschlecht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="@string/geschlecht_default"
+        android:textSize="22sp"
         app:layout_constraintTop_toBottomOf="@id/etNachname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/bFrau"
+    <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="@string/frau"
-        app:layout_constraintTop_toBottomOf="@id/tvGeschlecht"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bMann" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGeschlecht">
 
-    <Button
-        android:id="@+id/bMann"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mann"
-        app:layout_constraintTop_toBottomOf="@id/tvGeschlecht"
-        app:layout_constraintStart_toEndOf="@+id/bFrau"
-        app:layout_constraintEnd_toStartOf="@+id/bDivers" />
+        <RadioButton
+            android:id="@+id/radio_button_frau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frau"/>
 
-    <Button
-        android:id="@+id/bDivers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:text="@string/divers"
-        app:layout_constraintTop_toBottomOf="@id/tvGeschlecht"
-        app:layout_constraintStart_toEndOf="@+id/bMann"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <RadioButton
+            android:id="@+id/radio_button_mann"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mann"/>
 
+        <RadioButton
+            android:id="@+id/radio_button_divers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divers"/>
+
+    </RadioGroup>
 
     <TextView
-        android:id="@+id/tvAlter"
+        android:id="@+id/tvCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/alter_default"
-        app:layout_constraintTop_toBottomOf="@id/bMann"
+        android:text="Magst du Katzen?"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <SeekBar
-        android:id="@+id/sbAlter"
-        android:layout_width="256dp"
-        android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@id/tvAlter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <CheckBox
+        android:id="@+id/cbCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvCat"
+        app:layout_constraintBottom_toBottomOf="@id/tvCat"
+        app:layout_constraintStart_toEndOf="@id/tvCat" />
 
     <TextView
-        android:id="@+id/tvGewicht"
+        android:id="@+id/tvDog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gewicht_default"
-        app:layout_constraintTop_toBottomOf="@id/sbAlter"
+        android:layout_marginTop="8dp"
+        android:text="Magst du Hunde?"
+        app:layout_constraintTop_toBottomOf="@id/tvCat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <SeekBar
-        android:id="@+id/sbGewicht"
-        android:layout_width="256dp"
-        android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvGewicht"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <CheckBox
+        android:id="@+id/cbDog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        app:layout_constraintTop_toTopOf="@id/tvDog"
+        app:layout_constraintBottom_toBottomOf="@id/tvDog"
+        app:layout_constraintStart_toEndOf="@id/tvDog" />
 
 
     <Button
         android:id="@+id/bEinreichen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="18dp"
         android:text="@string/einreichen"
-        app:layout_constraintTop_toBottomOf="@id/sbGewicht"
+        app:layout_constraintTop_toBottomOf="@id/tvDog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bReset" />
 
@@ -151,8 +155,10 @@
         android:id="@+id/bReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/reset"
-        app:layout_constraintTop_toBottomOf="@id/sbGewicht"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDog"
         app:layout_constraintStart_toEndOf="@+id/bEinreichen"
         app:layout_constraintEnd_toEndOf="parent" />
 

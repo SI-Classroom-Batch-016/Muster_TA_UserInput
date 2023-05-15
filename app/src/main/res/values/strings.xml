@@ -26,7 +26,6 @@
     <string name="einreichen">Einreichen</string>
     <string name="reset">Reset</string>
     <string name="antwort">
-        Hallo %1$s %2$s! Deinen Eingaben zufolge ist dein Geschlecht %3$s,dein Alter %4$f und
-        dein Gewicht %5$f.
+        Hallo %1$s %2$s! Deinen Eingaben zufolge ist dein Geschlecht %3$s.
     </string>
 </resources>
