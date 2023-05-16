@@ -1,11 +1,10 @@
 package de.syntax_institut.form
 
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
-import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -19,6 +18,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var genderText: TextView
     lateinit var gender: RadioGroup
 
+    // cat and dog views
+    lateinit var cat: CheckBox
+    lateinit var dog: CheckBox
+
     // submit and reset views
     lateinit var submit: Button
     lateinit var submitText: TextView
@@ -28,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Init
+        // Init views
         // name views
         firstName = findViewById(R.id.etVorname)
         lastName = findViewById(R.id.etNachname)
@@ -37,16 +40,20 @@ class MainActivity : AppCompatActivity() {
         genderText = findViewById(R.id.tvGeschlecht)
         gender = findViewById(R.id.radio_group)
 
+        // cat and dog views
+        cat = findViewById(R.id.cbCat)
+        dog = findViewById(R.id.cbDog)
+
         // submit and reset views
         submit = findViewById(R.id.bEinreichen)
         submitText = findViewById(R.id.tvAntwort)
         reset = findViewById(R.id.bReset)
 
-
-
+        // Set onClickListener
         // Button "Einreichen"
         submit.setOnClickListener {
 
+            // Get selected gender
             var selectedGender: String? = null
             when (gender.checkedRadioButtonId) {
                 R.id.radio_button_frau -> selectedGender = "Frau"
@@ -54,14 +61,37 @@ class MainActivity : AppCompatActivity() {
                 R.id.radio_button_divers -> selectedGender = "Divers"
             }
 
-            // Check here, if user has made all required inputs
+            // Check here, if user has made all required inputs (first name, last name and gender selected)
+            val isFirstNameEntered = firstName.text.toString().isNotEmpty()
+            val isLastNameEntered = lastName.text.toString().isNotEmpty()
             val isGenderSelected = selectedGender != null
-            if (isGenderSelected) {
+            if (isFirstNameEntered && isLastNameEntered && isGenderSelected)
+            {
                 submitText.text = getString(R.string.antwort, firstName.text, lastName.text, selectedGender)
             } else {
-                submitText.text = "Fail"
+
+                // Build error message
+                var msg = ""
+                if ((!isFirstNameEntered || !isLastNameEntered) && isGenderSelected)
+                    msg += "Bitte gib deinen vollständigen Namen ein!"
+                else if ((!isFirstNameEntered || !isLastNameEntered))
+                    msg += "Bitte gib deinen vollständigen Namen und dein Geschlecht ein!"
+                else
+                    msg += "Bitte gib dein Geschlecht ein"
+
+                // Set error message
+                submitText.text = msg
             }
         }
 
+        // Button "Reset"
+        reset.setOnClickListener {
+            firstName.setText("")
+            lastName.setText("")
+            gender.clearCheck()
+            cat.isChecked = false
+            dog.isChecked = false
+            submitText.text = ""
+        }
     }
 }
