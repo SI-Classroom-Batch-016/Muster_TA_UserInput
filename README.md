@@ -1,11 +1,13 @@
-# Praxisaufgabe - Eingabeformular
+# Praxisaufgabe - Eingabeformular für Tierliebhaber
 
 Willkommen zur wöchentlichen Praxisaufgabe, heute wirst du ein Eingabeformular erstellen.
 
 ---
 
-Erstelle eine Benutzeroberfläche, die der in Abbildung 1 ähnelt.
-Es ist nicht notwendig, dass sie exakt gleich aussieht.
+### Auftrag
+Die Firma "PetConnect" sucht nach der Entwicklung einer Android-App, die ein Eingabeformular bereitstellt. 
+Das Formular soll Informationen über potenzielle Kunden sammeln, insbesondere deren Vorname, Nachname, Geschlecht sowie Vorlieben bezüglich Katzen und Hunden.
+Die Benutzeroberfläche soll der in Abbildung 1 dargestellten ähneln. Sie muss jedoch nicht exakt gleich aussehen.
 
 Zusätzlich hat deine Benutzeroberfläche folgende Funktionalitäten:
 1. Der Nutzer kann einen Vornamen und einen Nachnamen in die Textfelder "Vorname" 
@@ -19,8 +21,9 @@ und "Nachname" eingeben.
    die alle Eingaben noch einmal auflistet. Es wird auch aufgelistet, ob der Nutzer Hunde oder Katzen mag.
    3. Ist das <b>nicht</b> der Fall, wird der Nutzer darauf hingewiesen, dass die Eingaben unvollständig sind.
 
-Zusätzlich:  
+#### Zusätzlich:  
 - Gestalte das Eingabeformular möglichst benutzerfreundlich.  
+- Deine App sollte Fehlerfrei funktionieren.
 - Wenn möglich, benutze String-Ressourcen.
 
 <p align="center">
