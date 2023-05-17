@@ -17,9 +17,9 @@ und "Nachname" eingeben.
 4. Wenn der Nutzer auf den Button "Reset" drückt, werden alle Eingaben auf die Standardwerte zurückgestellt.
 5. Wenn der Nutzer auf den Button "Einreichen" drückt, wird überprüft, ob der Nutzer alle notwendigen Eingaben (Vorname, Nachname, Geschlecht) 
    ausgefüllt hat. 
-   2. Ist das der Fall, wird dem Nutzer eine Bestätigungsnachricht angezeigt, 
+   1. Ist das der Fall, wird dem Nutzer eine Bestätigungsnachricht angezeigt, 
    die alle Eingaben noch einmal auflistet. Es wird auch aufgelistet, ob der Nutzer Hunde oder Katzen mag.
-   3. Ist das <b>nicht</b> der Fall, wird der Nutzer darauf hingewiesen, dass die Eingaben unvollständig sind.
+   2. Ist das <b>nicht</b> der Fall, wird der Nutzer darauf hingewiesen, dass die Eingaben unvollständig sind.
 
 #### Zusätzlich:  
 - Gestalte das Eingabeformular möglichst benutzerfreundlich.  
