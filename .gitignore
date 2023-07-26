@@ -26,6 +26,6 @@ local.properties
 
 # Specific files
 /app/src/test/java/
-/app/src/androidTest/
+#/app/src/androidTest/
 /app/proguard-rules.pro
 /app/release/
