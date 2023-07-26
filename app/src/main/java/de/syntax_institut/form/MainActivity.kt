@@ -56,9 +56,9 @@ class MainActivity : AppCompatActivity() {
             // Get selected gender
             var selectedGender: String? = null
             when (gender.checkedRadioButtonId) {
-                R.id.radio_button_frau -> selectedGender = "Frau"
-                R.id.radio_button_mann -> selectedGender = "Mann"
-                R.id.radio_button_divers -> selectedGender = "Divers"
+                R.id.radio_button_frau -> selectedGender = R.string.frau.toString()
+                R.id.radio_button_mann -> selectedGender = R.string.mann.toString()
+                R.id.radio_button_divers -> selectedGender = R.string.divers.toString()
             }
 
             // Check here, if user has made all required inputs (first name, last name and gender selected)
@@ -73,11 +73,11 @@ class MainActivity : AppCompatActivity() {
                 // Build error message
                 var msg = ""
                 if ((!isFirstNameEntered || !isLastNameEntered) && isGenderSelected)
-                    msg += "Bitte gib deinen vollständigen Namen ein!"
+                    msg = R.string.error_one.toString()
                 else if ((!isFirstNameEntered || !isLastNameEntered))
-                    msg += "Bitte gib deinen vollständigen Namen und dein Geschlecht ein!"
+                    msg = R.string.error_two.toString()
                 else
-                    msg += "Bitte gib dein Geschlecht ein"
+                    msg = R.string.error_three.toString()
 
                 // Set error message
                 submitText.text = msg

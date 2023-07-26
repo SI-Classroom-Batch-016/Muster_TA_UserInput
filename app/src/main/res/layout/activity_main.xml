@@ -86,19 +86,19 @@
             android:id="@+id/radio_button_frau"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Frau"/>
+            android:text="@string/frau"/>
 
         <RadioButton
             android:id="@+id/radio_button_mann"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mann"/>
+            android:text="@string/mann"/>
 
         <RadioButton
             android:id="@+id/radio_button_divers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Divers"/>
+            android:text="@string/divers"/>
 
     </RadioGroup>
 
@@ -106,7 +106,7 @@
         android:id="@+id/tvCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Magst du Katzen?"
+        android:text="@string/check_box_cat"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/radio_group"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Magst du Hunde?"
+        android:text="@string/check_box_dog"
         app:layout_constraintTop_toBottomOf="@id/tvCat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

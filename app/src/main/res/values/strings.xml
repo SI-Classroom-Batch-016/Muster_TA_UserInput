@@ -1,31 +1,18 @@
 <resources>
     <string name="app_name">form</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="eingabeformular">Eingabeformular</string>
     <string name="vorname_default">Vorname</string>
-    <string name="vorname">Vorname: %1$s</string>
     <string name="nachname_default">Nachname</string>
-    <string name="nachname">Nachname: %1$s</string>
     <string name="geschlecht_default">Geschlecht</string>
-    <string name="geschlecht">Geschlecht: %1$s</string>
+    <string name="check_box_cat">Magst du Katzen?</string>
+    <string name="check_box_dog">Magst du Hunde?</string>
     <string name="frau">Frau</string>
     <string name="mann">Mann</string>
     <string name="divers">Divers</string>
-    <string name="alter_default">Alter</string>
-    <string name="alter">Alter: %1$i</string>
-    <string name="gewicht_default">Gewicht</string>
-    <string name="gewicht">Gewicht: %1$i</string>
     <string name="einreichen">Einreichen</string>
     <string name="reset">Reset</string>
-    <string name="antwort">
-        Hallo %1$s %2$s! Deinen Eingaben zufolge ist dein Geschlecht %3$s.
-    </string>
+    <string name="antwort">Hallo %1$s %2$s! Deinen Eingaben zufolge ist dein Geschlecht %3$s.</string>
+    <string name="error_one">Bitte gib deinen vollständigen Namen ein!</string>
+    <string name="error_two">Bitte gib deinen vollständigen Namen und dein Geschlecht ein!</string>
+    <string name="error_three">Bitte gib dein Geschlecht ein</string>
 </resources>
