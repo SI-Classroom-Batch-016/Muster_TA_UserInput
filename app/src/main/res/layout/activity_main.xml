@@ -32,10 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:textSize="24sp"
+            android:text="@string/form"
             android:textColor="@color/black"
-            android:text="@string/form"/>
-
+            android:textSize="24sp" />
     </androidx.appcompat.widget.Toolbar>
 
     <EditText
@@ -44,8 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/first_name"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -56,8 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/last_name"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etVorname" />
@@ -69,56 +68,55 @@
         android:layout_marginTop="32dp"
         android:text="@string/gender"
         android:textSize="22sp"
-        app:layout_constraintTop_toBottomOf="@id/etNachname"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/etNachname" />
 
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvGeschlecht">
 
         <RadioButton
             android:id="@+id/radio_button_frau"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/woman"/>
+            android:text="@string/woman" />
 
         <RadioButton
             android:id="@+id/radio_button_mann"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/man"/>
+            android:text="@string/man" />
 
         <RadioButton
             android:id="@+id/radio_button_divers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/diverse"/>
-
+            android:text="@string/diverse" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/tvCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/check_box_cat"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/radio_group"
+        android:text="@string/check_box_cat"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/radio_group" />
 
     <CheckBox
         android:id="@+id/cbCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/tvCat"
         app:layout_constraintBottom_toBottomOf="@id/tvCat"
-        app:layout_constraintStart_toEndOf="@id/tvCat" />
+        app:layout_constraintStart_toEndOf="@id/tvCat"
+        app:layout_constraintTop_toTopOf="@id/tvCat" />
 
     <TextView
         android:id="@+id/tvDog"
@@ -126,42 +124,40 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/check_box_dog"
-        app:layout_constraintTop_toBottomOf="@id/tvCat"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvCat" />
 
     <CheckBox
         android:id="@+id/cbDog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        app:layout_constraintTop_toTopOf="@id/tvDog"
         app:layout_constraintBottom_toBottomOf="@id/tvDog"
-        app:layout_constraintStart_toEndOf="@id/tvDog" />
-
+        app:layout_constraintStart_toEndOf="@id/tvDog"
+        app:layout_constraintTop_toTopOf="@id/tvDog" />
 
     <Button
         android:id="@+id/bEinreichen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
         android:text="@string/submit"
-        app:layout_constraintTop_toBottomOf="@id/tvDog"
+        app:layout_constraintEnd_toStartOf="@+id/bReset"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bReset" />
+        app:layout_constraintTop_toBottomOf="@id/tvDog" />
 
     <Button
         android:id="@+id/bReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/reset"
         android:layout_marginEnd="18dp"
-        app:layout_constraintTop_toBottomOf="@id/tvDog"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bEinreichen"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/tvDog" />
 
     <TextView
         android:id="@+id/tvAntwort"
@@ -169,23 +165,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text=""
-        app:layout_constraintTop_toBottomOf="@id/bEinreichen"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bEinreichen" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

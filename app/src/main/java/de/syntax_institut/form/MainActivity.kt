@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             } else {
 
                 // Build error message
-                var msg = ""
+                val msg: String
                 if ((!isFirstNameEntered || !isLastNameEntered) && isGenderSelected)
                     msg = R.string.error_name_missing.toString()
                 else if ((!isFirstNameEntered || !isLastNameEntered))
