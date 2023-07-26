@@ -73,11 +73,11 @@ class MainActivity : AppCompatActivity() {
                 // Build error message
                 val msg: String
                 if ((!isFirstNameEntered || !isLastNameEntered) && isGenderSelected)
-                    msg = R.string.error_name_missing.toString()
+                    msg = getString(R.string.error_name_missing)
                 else if ((!isFirstNameEntered || !isLastNameEntered))
-                    msg = R.string.error_name_gender_missing.toString()
+                    msg = getString(R.string.error_name_gender_missing)
                 else
-                    msg = R.string.error_gender_missing.toString()
+                    msg = getString(R.string.error_gender_missing)
 
                 // Set error message
                 submitText.text = msg
