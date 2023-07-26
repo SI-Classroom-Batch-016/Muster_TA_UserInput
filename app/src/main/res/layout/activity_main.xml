@@ -34,7 +34,7 @@
             android:layout_marginStart="32dp"
             android:textSize="24sp"
             android:textColor="@color/black"
-            android:text="@string/eingabeformular"/>
+            android:text="@string/form"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -45,7 +45,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="@string/vorname_default"
+        android:hint="@string/first_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -57,7 +57,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="@string/nachname_default"
+        android:hint="@string/last_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etVorname" />
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/geschlecht_default"
+        android:text="@string/gender"
         android:textSize="22sp"
         app:layout_constraintTop_toBottomOf="@id/etNachname"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,19 +86,19 @@
             android:id="@+id/radio_button_frau"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/frau"/>
+            android:text="@string/woman"/>
 
         <RadioButton
             android:id="@+id/radio_button_mann"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/mann"/>
+            android:text="@string/man"/>
 
         <RadioButton
             android:id="@+id/radio_button_divers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/divers"/>
+            android:text="@string/diverse"/>
 
     </RadioGroup>
 
@@ -146,7 +146,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="18dp"
-        android:text="@string/einreichen"
+        android:text="@string/submit"
         app:layout_constraintTop_toBottomOf="@id/tvDog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bReset" />

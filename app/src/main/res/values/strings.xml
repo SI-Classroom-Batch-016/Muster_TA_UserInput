@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">form</string>
-    <string name="eingabeformular">Eingabeformular</string>
-    <string name="vorname_default">Vorname</string>
-    <string name="nachname_default">Nachname</string>
-    <string name="geschlecht_default">Geschlecht</string>
+    <string name="form">Eingabeformular</string>
+    <string name="first_name">Vorname</string>
+    <string name="last_name">Nachname</string>
+    <string name="gender">Geschlecht</string>
     <string name="check_box_cat">Magst du Katzen?</string>
     <string name="check_box_dog">Magst du Hunde?</string>
-    <string name="frau">Frau</string>
-    <string name="mann">Mann</string>
-    <string name="divers">Divers</string>
-    <string name="einreichen">Einreichen</string>
+    <string name="woman">Frau</string>
+    <string name="man">Mann</string>
+    <string name="diverse">Divers</string>
+    <string name="submit">Einreichen</string>
     <string name="reset">Reset</string>
-    <string name="antwort">Hallo %1$s %2$s! Deinen Eingaben zufolge ist dein Geschlecht %3$s.</string>
-    <string name="error_one">Bitte gib deinen vollständigen Namen ein!</string>
-    <string name="error_two">Bitte gib deinen vollständigen Namen und dein Geschlecht ein!</string>
-    <string name="error_three">Bitte gib dein Geschlecht ein</string>
+    <string name="answer">Hallo %1$s %2$s! Deinen Eingaben zufolge ist dein Geschlecht %3$s.</string>
+    <string name="error_name_missing">Bitte gib deinen vollständigen Namen ein!</string>
+    <string name="error_name_gender_missing">Bitte gib deinen vollständigen Namen und dein Geschlecht ein!</string>
+    <string name="error_gender_missing">Bitte gib dein Geschlecht ein</string>
 </resources>

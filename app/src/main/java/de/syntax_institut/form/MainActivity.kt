@@ -56,9 +56,9 @@ class MainActivity : AppCompatActivity() {
             // Get selected gender
             var selectedGender: String? = null
             when (gender.checkedRadioButtonId) {
-                R.id.radio_button_frau -> selectedGender = R.string.frau.toString()
-                R.id.radio_button_mann -> selectedGender = R.string.mann.toString()
-                R.id.radio_button_divers -> selectedGender = R.string.divers.toString()
+                R.id.radio_button_frau -> selectedGender = getString(R.string.woman)
+                R.id.radio_button_mann -> selectedGender = getString(R.string.man)
+                R.id.radio_button_divers -> selectedGender = getString(R.string.diverse)
             }
 
             // Check here, if user has made all required inputs (first name, last name and gender selected)
@@ -67,17 +67,17 @@ class MainActivity : AppCompatActivity() {
             val isGenderSelected = selectedGender != null
             if (isFirstNameEntered && isLastNameEntered && isGenderSelected)
             {
-                submitText.text = getString(R.string.antwort, firstName.text, lastName.text, selectedGender)
+                submitText.text = getString(R.string.answer, firstName.text, lastName.text, selectedGender)
             } else {
 
                 // Build error message
                 var msg = ""
                 if ((!isFirstNameEntered || !isLastNameEntered) && isGenderSelected)
-                    msg = R.string.error_one.toString()
+                    msg = R.string.error_name_missing.toString()
                 else if ((!isFirstNameEntered || !isLastNameEntered))
-                    msg = R.string.error_two.toString()
+                    msg = R.string.error_name_gender_missing.toString()
                 else
-                    msg = R.string.error_three.toString()
+                    msg = R.string.error_gender_missing.toString()
 
                 // Set error message
                 submitText.text = msg
